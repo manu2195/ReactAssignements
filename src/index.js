@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
 //import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 class ParentCatClicker extends React.Component {
@@ -37,6 +38,7 @@ class ParentCatClicker extends React.Component {
 			   <h1>Welcome to Cat Clicker Application!</h1>
 			   <CatList noOfCats= {noOfCats} onCatListClick = {this.handleCatListClick}/>
 			    <CatImage currentCat= {this.state.currentCat} data = {this.state.data} onCatImageClick = {this.handleCatImageClick}/> 
+				
 			</div>
 			);
 	}
@@ -93,6 +95,21 @@ class CatImage extends React.Component {
 		</div>);
 	}
 }
+
+// class Admin extends React.Component {
+// 	constructor (props) {
+// 		super (props);
+// 		this.handleClick= this.handleClick.bind(this);
+// 	}
+// 	handleClick(e) {
+
+// 	}
+// 	render(){
+// 		return(
+// 			<button>
+// 		);
+// 	}
+// }
 ReactDOM.render(<ParentCatClicker/>, 
 	document.getElementById('root'));
 registerServiceWorker();
